@@ -1,3 +1,8 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 .row.login {
     height: calc(100vh - 80px);
     display: flex;
