@@ -1,0 +1,72 @@
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+#wave {
+  height: 70px;
+  width: 70px;
+  fill: #13bd64;
+}
+
+#Line_1 {
+  animation: pulse 1s infinite;
+  animation-delay: 1s;
+}
+
+#Line_2 {
+  animation: pulse 1s infinite;
+  animation-delay: 1.2s;
+}
+
+#Line_3 {
+  animation: pulse 1s infinite;
+  animation-delay: 1.4s;
+}
+
+#Line_4 {
+  animation: pulse 1s infinite;
+  animation-delay: 1.6s;
+}
+
+#Line_5 {
+  animation: pulse 1s infinite;
+  animation-delay: 1.8s;
+}
+
+#Line_6 {
+  animation: pulse 1s infinite;
+  animation-delay: 2s;
+}
+
+#Line_7 {
+  animation: pulse 1s infinite;
+  animation-delay: 2.2s;
+}
+
+#Line_8 {
+  animation: pulse 1s infinite;
+  animation-delay: 2.4s;
+}
+
+#Line_9 {
+  animation: pulse 1s infinite;
+  animation-delay: 2.6s;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scaleY(1);
+    transform-origin: 50% 50%;
+  }
+  50% {
+    transform: scaleY(0.7);
+    transform-origin: 50% 50%;
+  }
+  100% {
+    transform: scaleY(1);
+    transform-origin: 50% 50%;
+  }
+}

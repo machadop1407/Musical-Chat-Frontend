@@ -1,0 +1,23 @@
+body {
+    background-color: #181313;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+button:focus {
+    outline: 0;
+}
+
+input:focus {
+    outline: 0;
+}
+
+nav {
+    background-color: #13BD64;
+    box-shadow: 2px 2px 8px black;
+    min-height: 80px;
+}
+
+.navContainer .links {
+    font-size: 25px;
+    color: #f0f0f0;
+}
