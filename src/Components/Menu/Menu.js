@@ -120,7 +120,9 @@ export default function Menu({ spotify }) {
           {currentSong == "Music Not Playing" && <h1>{currentSong}</h1>}
         </div> */}
 
-        <h1> THANK YOU FOR YOUR DATA, THE WEBSITE IS UNDER CONSTRUCTION</h1>
+        <h1 id="construction">
+          THANK YOU FOR YOUR DATA, THE WEBSITE IS UNDER CONSTRUCTION
+        </h1>
       </div>
     </>
   );

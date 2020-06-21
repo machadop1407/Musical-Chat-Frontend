@@ -62,9 +62,7 @@ tbody {
   overflow: auto;
 }
 
-table,
-th,
-td {
+table, th, td {
   padding: 10px;
   font-size: 30px;
   border: none;
@@ -89,6 +87,7 @@ td {
 .rightCol a {
   text-decoration: none;
 }
+
 #tracks:hover {
   cursor: pointer;
   background-color: #3d3d3d;
@@ -109,4 +108,8 @@ td {
   color: #f5f5f5;
   font-size: 20px;
   padding: 20px;
+}
+
+#construction {
+  color: #f5f5f5;
 }
