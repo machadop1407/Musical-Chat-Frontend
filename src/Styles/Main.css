@@ -55,3 +55,12 @@
 .login button:hover {
     cursor: pointer;
 }
+
+@media screen and (max-width: 450px) {
+    #loginTitle {
+        font-size: 20px;
+        margin-bottom: 50px;
+        justify-content: center;
+        width: 70%;
+    }
+}

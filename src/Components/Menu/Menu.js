@@ -74,7 +74,7 @@ export default function Menu({ spotify }) {
   return (
     <>
       <div className="row menuPage">
-        <div className="leftCol">
+        {/* <div className="leftCol">
           <div className="messaging">
             <Messaging username={username} />
           </div>
@@ -118,7 +118,9 @@ export default function Menu({ spotify }) {
             <h1>Now Playing: {currentSong}</h1>
           )}
           {currentSong == "Music Not Playing" && <h1>{currentSong}</h1>}
-        </div>
+        </div> */}
+
+        <h1> THANK YOU FOR YOUR DATA, THE WEBSITE IS UNDER CONSTRUCTION</h1>
       </div>
     </>
   );
