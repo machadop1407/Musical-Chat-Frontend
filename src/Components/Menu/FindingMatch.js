@@ -22,7 +22,7 @@ export default function FindingMatch({ spotify, spotifyId }) {
         Search
       </button>
 
-      {match}
+      <h1>{match}</h1>
     </div>
   );
 }
