@@ -3,6 +3,7 @@
   border-radius: 8px;
   height: 100%;
   width: 100%;
+  padding-left: 0;
 }
 
 .messagingWrapper .header {
@@ -11,8 +12,6 @@
   border-bottom: 2px solid #f8f8f8;
   color: #f5f5f5;
   font-weight: 700;
-  padding-left: 10px;
-  padding-top: 15px;
 }
 
 .messagingContent {
@@ -21,6 +20,11 @@
   display: flex;
   align-items: center;
   text-align: center;
+}
+
+#username {
+  padding-left: 10px;
+  padding-top: 15px;
 }
 
 .chat {
@@ -39,6 +43,7 @@
   }
 
   #chat-title h1 {
-    font-size: 25px;
+    font-size: 20px;
+    font-family: "Century Gothic";
   }
 }

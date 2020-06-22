@@ -28,7 +28,7 @@ const Main = () => {
 
   return (
     <div className="Main">
-      <div className="container-fluid">
+      <div className="mainContainer">
         {!loggedIn && (
           <div className="row login">
             <div id="loginTitle">
