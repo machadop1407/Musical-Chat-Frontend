@@ -13,6 +13,7 @@ export default function FindingMatch({ spotify, spotifyId }) {
         setMatch(res[0].username);
         console.log(res[0].username);
         console.log(res[0]);
+        console.log(res);
       });
   };
 
