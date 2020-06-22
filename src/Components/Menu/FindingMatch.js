@@ -10,10 +10,9 @@ export default function FindingMatch({ spotify, spotifyId }) {
     axios
       .post(process.env.REACT_APP_API_URL + "matching", { id: spotifyId })
       .then((res) => {
-        setMatch(res[0].username);
-        console.log(res[0].username);
-        console.log(res[0]);
         console.log(res);
+        alert(res);
+        setMatch(res[0].username);
       });
   };
 
