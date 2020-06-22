@@ -4,18 +4,13 @@ import axios from "axios";
 
 export default function FindingMatch({ spotify, spotifyId }) {
   const [name, setName] = useState("");
-
-  // useEffect(() => {}, []);
+  const [match, setMatch] = useState("");
 
   const findMatch = () => {
     axios
       .post(process.env.REACT_APP_API_URL + "matching", { id: spotifyId })
       .then((res) => {
-        if (res.message != undefined) {
-          console.log(res.data.message);
-        } else {
-          console.log(res);
-        }
+        setMatch(res[0].username);
       });
   };
 
@@ -26,6 +21,8 @@ export default function FindingMatch({ spotify, spotifyId }) {
       <button id="matchBttn" onClick={findMatch}>
         Search
       </button>
+
+      {match}
     </div>
   );
 }

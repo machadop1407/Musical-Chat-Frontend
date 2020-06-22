@@ -20,7 +20,7 @@ const Main = () => {
 
   const params = getHashParams();
 
-  const [loggedIn, setLoggedIn] = useState(params.access_token ? true : false);
+  const [loggedIn, setLoggedIn] = useState(params.access_token ? false : true);
 
   if (params.access_token) {
     spotifyWebApi.setAccessToken(params.access_token);
@@ -39,6 +39,7 @@ const Main = () => {
               <p>Have The Same Musical Taste As</p>
               <p>YOU.</p>
             </div>
+
             <a href={process.env.REACT_APP_AUTH_URL}>
               <button>Login With Spotify</button>
             </a>
@@ -47,10 +48,6 @@ const Main = () => {
 
         {loggedIn && <Menu spotify={spotifyWebApi} />}
       </div>
-      {/* <button onClick={() => this.getAllFavorite()}>
-        {" "}
-        Check Currently Playing
-      </button> */}
     </div>
   );
 };

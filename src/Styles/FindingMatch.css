@@ -53,3 +53,15 @@
 #matchBttn:hover {
   cursor: pointer;
 }
+
+@media screen and (max-width: 1000px) {
+  .matchWrapper h1 {
+    font-size: 4vw;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .messaging {
+    height: 80%;
+  }
+}

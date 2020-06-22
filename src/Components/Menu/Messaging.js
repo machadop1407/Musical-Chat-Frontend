@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../../Styles/Messaging.css";
 
 export default function Messaging({ username }) {
-  const [conversations, setConversations] = useState([1]);
+  // const [conversations, setConversations] = useState([1]);
 
   return (
     <div className="messagingWrapper">
@@ -11,7 +11,7 @@ export default function Messaging({ username }) {
       </div>
 
       <div className="messagingContent">
-        <div className="sidebar">
+        {/* <div className="sidebar">
           <div className="sidebarMessage">
             <p>New Chat!</p>
           </div>
@@ -21,6 +21,10 @@ export default function Messaging({ username }) {
                 <p></p>
               </div>
             ))}
+        </div> */}
+
+        <div id="chat-title">
+          <h1> No Current Chat Available!</h1>
         </div>
 
         <div className="chat"></div>
