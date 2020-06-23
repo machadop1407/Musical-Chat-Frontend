@@ -80,9 +80,6 @@ export default function Menu({ spotify }) {
           </div>
         </div>
         <div className="rightCol">
-          <div className="findingMatch">
-            <FindingMatch spotify={spotify} spotifyId={spotifyId} />
-          </div>
           <div className="topTracks">
             <div className="topTracksTitle">
               <h1>Your Top 20 </h1>

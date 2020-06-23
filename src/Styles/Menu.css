@@ -8,27 +8,20 @@
 .row.menuPage .leftCol {
   height: 400px;
   flex: 40%;
-  margin-top: 50px;
-  max-width: 40%;
+  margin: 50px;
 }
 
 .messaging {
   height: 100%;
-  padding-left: 50px;
 }
 
 .row.menuPage .rightCol {
   height: 400px;
-  display: flex;
-  flex-flow: row wrap;
-  flex: 60%;
-  margin-top: 50px;
+  flex: 40%;
+  margin: 50px;
   border-radius: 8px;
-}
-
-.findingMatch {
-  order: 1;
-  width: 50%;
+  display: flex;
+  justify-content: center;
 }
 
 /* TOP TRACKS DIV */
@@ -66,13 +59,13 @@ tbody {
   overflow: auto;
   border: 1px solid #f8f8f8;
 }
+
 table {
   margin-right: 50px;
   border-spacing: 0;
 }
 
-th,
-td {
+th, td {
   padding: 10px;
   font-size: 25px;
   font-family: "Century Gothic";
@@ -127,41 +120,35 @@ td {
 }
 
 @media screen and (max-width: 1300px) {
-  .row.menuPage {
+  /* .row.menuPage {
     flex-direction: column-reverse;
   }
-
   .row.menuPage .leftCol {
     margin-left: 20%;
-  }
+  } */
 }
 
 @media screen and (max-width: 1000px) {
-  .row.menuPage {
+  /* .row.menuPage {
     align-items: center;
   }
-
   .findingMatch {
     width: 50vw;
     margin-left: 0;
   }
-
   .row.menuPage .leftCol {
     width: 80vw;
     margin-left: 0;
   }
-
   .row.menuPage .rightCol {
     padding: 0%;
   }
-
   .messaging {
     width: 100%;
     height: 100%;
     padding-left: 0;
   }
-
   .topTracks {
     display: none;
-  }
+  } */
 }

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../../Styles/Messaging.css";
+import FindingMatch from "../Menu/FindingMatch";
 
 export default function Messaging({ username }) {
   // const [conversations, setConversations] = useState([1]);
@@ -23,9 +24,9 @@ export default function Messaging({ username }) {
             ))}
         </div> */}
 
-        <div id="chat-title">
-          <h1> No Current Chat Available!</h1>
-        </div>
+        <FindingMatch />
+
+        {/*  */}
 
         <div className="chat"></div>
       </div>

@@ -1,11 +1,11 @@
 .matchWrapper {
   border-radius: 8px;
   height: 100%;
-  padding: 10px;
-  padding-top: 20px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 25%;
   flex-direction: column;
 }
 
@@ -13,6 +13,7 @@
   color: #f5f5f5;
   font-size: 2vw;
   padding-bottom: 20px;
+  width: 100%;
 }
 
 .matchWrapper input {
@@ -41,17 +42,16 @@
   background-color: #13bd64;
   color: #f8f8f8;
   font-weight: 600;
-  box-shadow: 0 6px #999;
 }
 
 #matchBttn:active {
-  box-shadow: 0 3px #666;
-  transform: translate(0, 5px);
-  transition: all 0.3s ease-in;
+  background-color: seagreen;
+  transition: all 0.1s ease-in;
 }
 
 #matchBttn:hover {
   cursor: pointer;
+  box-shadow: 2px 2px 15px black;
 }
 
 @media screen and (max-width: 1000px) {
