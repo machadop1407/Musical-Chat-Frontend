@@ -20,7 +20,7 @@ const Main = () => {
 
   const params = getHashParams();
 
-  const [loggedIn, setLoggedIn] = useState(params.access_token ? false : true);
+  const [loggedIn, setLoggedIn] = useState(params.access_token ? true : false);
 
   if (params.access_token) {
     spotifyWebApi.setAccessToken(params.access_token);
