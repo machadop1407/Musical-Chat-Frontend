@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../../Styles/Messaging.css";
 import FindingMatch from "../Menu/FindingMatch";
 
-export default function Messaging({ username }) {
+export default function Messaging({ username, spotifyId }) {
   // const [conversations, setConversations] = useState([1]);
 
   return (
@@ -24,7 +24,7 @@ export default function Messaging({ username }) {
             ))}
         </div> */}
 
-        <FindingMatch />
+        <FindingMatch spotifyId={spotifyId} />
 
         {/*  */}
 

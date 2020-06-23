@@ -76,7 +76,7 @@ export default function Menu({ spotify }) {
       <div className="row menuPage">
         <div className="leftCol">
           <div className="messaging">
-            <Messaging username={username} />
+            <Messaging username={username} spotifyId={spotifyId} />
           </div>
         </div>
         <div className="rightCol">

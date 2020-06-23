@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../../Styles/FindingMatch.css";
 import axios from "axios";
 
-export default function FindingMatch({ spotify, spotifyId }) {
+export default function FindingMatch({ spotifyId }) {
   const [name, setName] = useState("");
   const [match, setMatch] = useState("");
 
