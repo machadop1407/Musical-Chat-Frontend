@@ -3,28 +3,36 @@ import "../../Styles/Messaging.css";
 import FindingMatch from "../Menu/FindingMatch";
 
 export default function Messaging({ username, spotifyId }) {
-  // const [conversations, setConversations] = useState([1]);
+  const [match, setMatch] = useState({});
+  const [isMatched, setIsMatched] = useState(false);
+
+  const updateMatch = (user) => {
+    setMatch(user);
+    setIsMatched(true);
+  };
 
   return (
     <div className="messagingWrapper">
       <div className="header">
         <div id="username">@{username}</div>
+        {isMatched && (
+          <>
+            <div id="rematch">
+              <FindingMatch isMatched={isMatched} />{" "}
+            </div>
+            <div id="match-username">Match: @{match.username}</div>
+          </>
+        )}
       </div>
 
       <div className="messagingContent">
-        {/* <div className="sidebar">
-          <div className="sidebarMessage">
-            <p>New Chat!</p>
-          </div>
-          {conversations.length > 0 &&
-            conversations.map((val, key) => (
-              <div className="sidebarMessage" id={val}>
-                <p></p>
-              </div>
-            ))}
-        </div> */}
-
-        <FindingMatch spotifyId={spotifyId} />
+        {!isMatched && (
+          <FindingMatch
+            spotifyId={spotifyId}
+            updateMatch={updateMatch}
+            isMatched={isMatched}
+          />
+        )}
 
         {/*  */}
 

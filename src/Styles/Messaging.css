@@ -11,6 +11,10 @@
   border-bottom: 2px solid #f8f8f8;
   color: #f5f5f5;
   font-weight: 700;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .messagingContent {
@@ -22,8 +26,20 @@
 }
 
 #username {
-  padding-left: 10px;
-  padding-top: 15px;
+  order: 1;
+  flex: 60%;
+  margin-left: 20px;
+}
+
+#rematch {
+  order: 2;
+  flex: 15%;
+  margin-left: 8%;
+}
+
+#match-username {
+  order: 13;
+  flex: 25%;
 }
 
 .chat {

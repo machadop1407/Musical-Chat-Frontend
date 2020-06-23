@@ -82,7 +82,7 @@ export default function Menu({ spotify }) {
         <div className="rightCol">
           <div className="topTracks">
             <div className="topTracksTitle">
-              <h1>Your Top 20 </h1>
+              <h1> Your Top 20 </h1>
               <img src={Fire} id="fireEmoji" />
             </div>
 
