@@ -6,13 +6,13 @@ export default function FindingMatch({ spotifyId, updateMatch, isMatched }) {
   const [name, setName] = useState("");
 
   const findMatch = () => {
-    // axios
-    //   .post(process.env.REACT_APP_API_URL + "matching", { id: spotifyId })
-    //   .then((res) => {
-    //     updateMatch(res.data[0]);
-    //   });
+    axios
+      .post(process.env.REACT_APP_API_URL + "matching", { id: spotifyId })
+      .then((res) => {
+        updateMatch(res.data[0]);
+      });
 
-    updateMatch({ username: "CacaBB" });
+    // updateMatch({ username: "CacaBB" });
   };
 
   return (
