@@ -98,7 +98,6 @@ th, td {
 }
 
 .row.bottomMenu {
-  padding: 25px;
   width: 100%;
 }
 
@@ -129,6 +128,9 @@ th, td {
   #fireEmoji {
     display: none;
   }
+  .topTracks {
+    padding-left: 10%;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -136,11 +138,11 @@ th, td {
     margin: 10px;
     margin-left: 9px;
   }
-  .topTracksTitle {
-    margin-left: 40px;
-    width: 100%;
-  }
   .topTracksTitle h1 {
-    font-size: 15px;
+    width: 120px;
+    font-size: 20px;
+  }
+  tbody {
+    width: 250px;
   }
 }

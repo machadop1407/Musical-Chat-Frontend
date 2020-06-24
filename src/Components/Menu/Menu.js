@@ -11,6 +11,28 @@ export default function Menu({ spotify }) {
   const [currentSong, setCurrentSong] = useState(null);
   const [username, setUsername] = useState(null);
   const [spotifyId, setId] = useState("");
+  // var fakeTracks = [
+  //   "sdada",
+  //   "asdasd",
+  //   "sdada",
+  //   "asdasd",
+  //   "asdasd",
+  //   "sdada",
+  //   "asdasd",
+  //   "asdasd",
+  //   "sdada",
+  //   "asdasd",
+  //   "asdasd",
+  //   "sdada",
+  //   "asdasd",
+  //   "asdasd",
+  //   "sdada",
+  //   "asdasd",
+  //   "asdasd",
+  //   "sdada",
+  //   "asdasd",
+  //   "asdasd",
+  // ];
 
   useEffect(() => {
     setUsername("Username");
@@ -104,6 +126,19 @@ export default function Menu({ spotify }) {
                 </tbody>
               </table>
             )}
+
+            {/* <table>
+              <tbody>
+                {fakeTracks.map((tracks, key) => (
+                  <tr key={key + 1}>
+                    <td id="id">{key + 1}</td>
+                    <a target="_blank">
+                      <td id="tracks">{tracks}</td>
+                    </a>
+                  </tr>
+                ))}
+              </tbody>
+            </table> */}
           </div>
         </div>
       </div>

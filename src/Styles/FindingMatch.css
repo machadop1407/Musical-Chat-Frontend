@@ -149,6 +149,13 @@
     align-items: center;
     text-align: center;
   }
+  .modal-body {
+    padding-top: 0;
+  }
+  .modal-body h1 {
+    margin: 5px;
+    font-size: 15px;
+  }
   .modal-bttns {
     position: initial;
   }

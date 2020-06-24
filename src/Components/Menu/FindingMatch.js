@@ -14,7 +14,7 @@ export default function FindingMatch({ spotifyId, updateMatch, isMatched }) {
         .then((res) => {
           updateMatch(res.data);
         });
-      // updateMatch({ username: "CacaBB" });
+      // updateMatch({ username: "Macha" });
     }
   };
 
@@ -33,7 +33,7 @@ export default function FindingMatch({ spotifyId, updateMatch, isMatched }) {
       .then((res) => {
         updateMatch(res.data);
       });
-    // updateMatch({ username: "CacaBB" });
+    // updateMatch({ username: "Machadao" });
   };
 
   return (
