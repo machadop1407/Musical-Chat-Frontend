@@ -9,12 +9,12 @@ export default function FindingMatch({ spotifyId, updateMatch, isMatched }) {
     if (isMatched) {
       showModal();
     } else {
-      // axios
-      //   .post(process.env.REACT_APP_API_URL + "matching", { id: spotifyId })
-      //   .then((res) => {
-      //     updateMatch(res.data);
-      //   });
-      updateMatch({ username: "CacaBB" });
+      axios
+        .post(process.env.REACT_APP_API_URL + "matching", { id: spotifyId })
+        .then((res) => {
+          updateMatch(res.data);
+        });
+      // updateMatch({ username: "CacaBB" });
     }
   };
 
@@ -28,12 +28,12 @@ export default function FindingMatch({ spotifyId, updateMatch, isMatched }) {
 
   const continueRematch = () => {
     hideModal();
-    // axios
-    //   .post(process.env.REACT_APP_API_URL + "matching", { id: spotifyId })
-    //   .then((res) => {
-    //     updateMatch(res.data);
-    //   });
-    updateMatch({ username: "CacaBB" });
+    axios
+      .post(process.env.REACT_APP_API_URL + "matching", { id: spotifyId })
+      .then((res) => {
+        updateMatch(res.data);
+      });
+    // updateMatch({ username: "CacaBB" });
   };
 
   return (
