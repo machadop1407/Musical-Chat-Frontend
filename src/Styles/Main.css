@@ -1,11 +1,15 @@
-html,
-body {
+html, body {
   max-width: 100%;
   overflow-x: hidden;
   font-family: "Trebuchet MS", "Century Gothic", Helvetica;
 }
+
 .mainContainer {
   width: 100vw;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 .row.login {
@@ -14,16 +18,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background: linear-gradient(
-    90deg,
-    rgba(24, 19, 19, 1) 0%,
-    rgba(25, 28, 25, 1) 20%,
-    rgba(40, 51, 32, 1) 35%,
-    rgba(49, 65, 40, 1) 50%,
-    rgba(47, 69, 24, 1) 63%,
-    rgba(24, 19, 19, 1) 90%,
-    rgba(24, 19, 19, 1) 100%
-  );
+  background: linear-gradient( 90deg, rgba(24, 19, 19, 1) 0%, rgba(25, 28, 25, 1) 20%, rgba(40, 51, 32, 1) 35%, rgba(49, 65, 40, 1) 50%, rgba(47, 69, 24, 1) 63%, rgba(24, 19, 19, 1) 90%, rgba(24, 19, 19, 1) 100%);
   background-size: 400%;
   animation: bgAnimation 30s infinite;
 }

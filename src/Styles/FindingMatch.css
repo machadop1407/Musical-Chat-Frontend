@@ -5,33 +5,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 25%;
+  margin-left: 30%;
   flex-direction: column;
 }
 
 .matchWrapper h1 {
   color: #f5f5f5;
   font-size: 2vw;
-  padding-bottom: 20px;
+  padding-bottom: 5px;
   width: 100%;
-}
-
-.matchWrapper input {
-  margin-bottom: 20px;
-  border-radius: 8px;
-  border: 3px solid #f8f8f8;
-  box-shadow: 1px 1px 3px #13bd64;
-  text-align: center;
-  height: 35px;
-  width: 45%;
-  font-weight: 800;
-  color: #13bd64;
-  background-color: transparent;
-}
-
-.matchWrapper input:focus {
-  box-shadow: 1px 1px 10px #13bd64;
-  transition: all 0.3s ease-in;
 }
 
 #matchBttn {
@@ -50,18 +32,130 @@
 }
 
 #matchBttn:hover {
-  cursor: pointer;
   box-shadow: 2px 2px 15px black;
+}
+
+/* REMATCH MODAL */
+
+.re-match-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.re-match-modal-content {
+  position: fixed;
+  background: #f5f5f5;
+  width: 35%;
+  height: 30%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+}
+
+.modal-header {
+  width: 100%;
+  height: 40px;
+  border-bottom: 2px solid lightgray;
+}
+
+.modal-header button {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  color: grey;
+}
+
+.modal-header button:active {
+  color: black;
+}
+
+.modal-body {
+  font-size: 12px;
+  height: calc(100% - 40px);
+  width: 100%;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.modal-footer {
+  position: absolute;
+  bottom: 0px;
+  height: 40px;
+  width: 100%;
+}
+
+.modal-bttns {
+  position: absolute;
+  right: 20px;
+}
+
+.modal-footer button {
+  border: none;
+  border-radius: 7px;
+  width: 70px;
+  height: 30px;
+  background-color: #13bd64;
+  color: #f8f8f8;
+  font-weight: 600;
+}
+
+.modal-footer button:last-child {
+  margin-left: 10px;
+}
+
+.modal-footer button:active {
+  background-color: seagreen;
+}
+
+#modal-text {
+  color: #000000;
 }
 
 @media screen and (max-width: 1000px) {
   .matchWrapper h1 {
     font-size: 4vw;
   }
+  .re-match-modal-content {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .re-match-modal-content {
+    width: 70%;
+  }
+  .modal-body h1 {
+    font-size: 18px;
+    padding-top: 10px;
+    margin: 15px;
+  }
 }
 
 @media screen and (max-width: 450px) {
   .messaging {
     height: 80%;
+  }
+  .modal-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .modal-bttns {
+    position: initial;
+  }
+  #matchBttn {
+    font-size: 15px;
+    /* width: 70px; */
+    height: 35px;
+    font-weight: 800;
   }
 }

@@ -24,7 +24,9 @@ export default function Messaging({ username, spotifyId }) {
                 updateMatch={updateMatch}
               />{" "}
             </div>
-            <div id="match-username">Match: @{match.username}</div>
+            <div id="match-username">
+              <span id="match-pretext">Match: </span>@{match.username}
+            </div>
           </>
         )}
       </div>
