@@ -18,7 +18,11 @@ export default function Messaging({ username, spotifyId }) {
         {isMatched && (
           <>
             <div id="rematch">
-              <FindingMatch isMatched={isMatched} />{" "}
+              <FindingMatch
+                isMatched={isMatched}
+                spotifyId={spotifyId}
+                updateMatch={updateMatch}
+              />{" "}
             </div>
             <div id="match-username">Match: @{match.username}</div>
           </>
@@ -33,8 +37,6 @@ export default function Messaging({ username, spotifyId }) {
             isMatched={isMatched}
           />
         )}
-
-        {/*  */}
 
         <div className="chat"></div>
       </div>
