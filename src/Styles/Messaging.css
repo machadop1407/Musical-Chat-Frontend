@@ -60,14 +60,8 @@
     font-size: 20px;
     font-family: "Century Gothic";
   }
-  #rematch {
-    /* margin-left: -100px; */
-  }
   #match-username {
     padding-left: 20px;
     padding-right: 20px;
-  }
-  #match-pretext {
-    display: none;
   }
 }

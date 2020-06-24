@@ -25,9 +25,9 @@ export default function Messaging({ username, spotifyId }) {
               />{" "}
             </div>
             <div id="match-username">
-              <span id="match-pretext">Match: </span>@
-              {match.username.length > 7
-                ? match.username.substring(0, 5) + "..."
+              @
+              {match.username.length > 14
+                ? match.username.substring(0, 11) + "..."
                 : match.username}
             </div>
           </>
