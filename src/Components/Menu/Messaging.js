@@ -1,10 +1,22 @@
 import React, { useEffect, useState } from "react";
 import "../../Styles/Messaging.css";
 import FindingMatch from "../Menu/FindingMatch";
+import axios from "axios";
 
 export default function Messaging({ username, spotifyId }) {
   const [match, setMatch] = useState({});
   const [isMatched, setIsMatched] = useState(false);
+
+  useEffect(() => {
+    axios
+      .get(process.env.REACT_APP_API_URL + "matching/returnmatch", {
+        params: { id: spotifyId },
+      })
+      .then((res) => {
+        console.log(res);
+        console.log(res.data);
+      });
+  }, []);
 
   const updateMatch = (user) => {
     setMatch(user);
@@ -21,8 +33,9 @@ export default function Messaging({ username, spotifyId }) {
               <FindingMatch
                 isMatched={isMatched}
                 spotifyId={spotifyId}
+                username={username}
                 updateMatch={updateMatch}
-              />{" "}
+              />
             </div>
             <div id="match-username">
               @
@@ -38,6 +51,7 @@ export default function Messaging({ username, spotifyId }) {
         {!isMatched && (
           <FindingMatch
             spotifyId={spotifyId}
+            username={username}
             updateMatch={updateMatch}
             isMatched={isMatched}
           />

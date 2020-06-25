@@ -1,16 +1,26 @@
 import React, { useState, useEffect } from "react";
 import "../../Styles/FindingMatch.css";
 import axios from "axios";
+import Switch from "react-switch";
 
-export default function FindingMatch({ spotifyId, updateMatch, isMatched }) {
+export default function FindingMatch({
+  spotifyId,
+  username,
+  updateMatch,
+  isMatched,
+}) {
   // const [name, setName] = useState("");
   const [modal, setModal] = useState(false);
+
   const findMatch = () => {
     if (isMatched) {
       showModal();
     } else {
       axios
-        .post(process.env.REACT_APP_API_URL + "matching", { id: spotifyId })
+        .post(process.env.REACT_APP_API_URL + "matching", {
+          id: spotifyId,
+          username: username,
+        })
         .then((res) => {
           updateMatch(res.data);
         });
@@ -29,7 +39,10 @@ export default function FindingMatch({ spotifyId, updateMatch, isMatched }) {
   const continueRematch = () => {
     hideModal();
     axios
-      .post(process.env.REACT_APP_API_URL + "matching", { id: spotifyId })
+      .post(process.env.REACT_APP_API_URL + "matching", {
+        id: spotifyId,
+        username: username,
+      })
       .then((res) => {
         updateMatch(res.data);
       });
@@ -41,7 +54,6 @@ export default function FindingMatch({ spotifyId, updateMatch, isMatched }) {
       {!isMatched && (
         <div className="matchWrapper">
           <h1>Find A New Match!</h1>
-          {/* <input type="text" placeholder={name} /> */}
           <button id="matchBttn" onClick={findMatch}>
             Search
           </button>

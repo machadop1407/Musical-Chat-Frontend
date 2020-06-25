@@ -11,28 +11,28 @@ export default function Menu({ spotify }) {
   const [currentSong, setCurrentSong] = useState(null);
   const [username, setUsername] = useState(null);
   const [spotifyId, setId] = useState("");
-  // var fakeTracks = [
-  //   "sdada",
-  //   "asdasd",
-  //   "sdada",
-  //   "asdasd",
-  //   "asdasd",
-  //   "sdada",
-  //   "asdasd",
-  //   "asdasd",
-  //   "sdada",
-  //   "asdasd",
-  //   "asdasd",
-  //   "sdada",
-  //   "asdasd",
-  //   "asdasd",
-  //   "sdada",
-  //   "asdasd",
-  //   "asdasd",
-  //   "sdada",
-  //   "asdasd",
-  //   "asdasd",
-  // ];
+  var fakeTracks = [
+    "sdada",
+    "asdasd",
+    "sdada",
+    "asdasd",
+    "asdasd",
+    "sdada",
+    "asdasd",
+    "asdasd",
+    "sdada",
+    "asdasd",
+    "asdasd",
+    "sdada",
+    "asdasd",
+    "asdasd",
+    "sdada",
+    "asdasd",
+    "asdasd",
+    "sdada",
+    "asdasd",
+    "asdasd",
+  ];
 
   useEffect(() => {
     setUsername("Username");
@@ -108,7 +108,7 @@ export default function Menu({ spotify }) {
               <img src={Fire} id="fireEmoji" />
             </div>
 
-            {topTracks.length > 0 && (
+            {/* {topTracks.length > 0 && (
               <table>
                 <tbody>
                   {topTracks.map((tracks, key) => (
@@ -125,9 +125,9 @@ export default function Menu({ spotify }) {
                   ))}
                 </tbody>
               </table>
-            )}
+            )} */}
 
-            {/* <table>
+            <table>
               <tbody>
                 {fakeTracks.map((tracks, key) => (
                   <tr key={key + 1}>
@@ -138,7 +138,7 @@ export default function Menu({ spotify }) {
                   </tr>
                 ))}
               </tbody>
-            </table> */}
+            </table>
           </div>
         </div>
       </div>

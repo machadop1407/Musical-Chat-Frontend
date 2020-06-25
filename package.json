@@ -10,6 +10,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
+    "react-switch": "^5.0.1",
     "reactstrap": "^8.4.1",
     "spotify-web-api-js": "^1.4.0"
   },

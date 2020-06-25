@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import "../Styles/Header.css";
-import Logo from "../Images/logo.png";
+import Logo from "../Images/playLogo.png";
 
 export default function Header() {
   return (
