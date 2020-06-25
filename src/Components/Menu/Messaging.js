@@ -7,17 +7,6 @@ export default function Messaging({ username, spotifyId }) {
   const [match, setMatch] = useState({});
   const [isMatched, setIsMatched] = useState(false);
 
-  useEffect(() => {
-    axios
-      .get(process.env.REACT_APP_API_URL + "matching/returnmatch", {
-        params: { id: spotifyId },
-      })
-      .then((res) => {
-        console.log(res);
-        console.log(res.data);
-      });
-  }, []);
-
   const updateMatch = (user) => {
     setMatch(user);
     setIsMatched(true);
