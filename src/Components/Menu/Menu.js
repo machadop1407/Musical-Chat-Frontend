@@ -78,7 +78,7 @@ export default function Menu({ spotify }) {
             setId(response.id);
             axios.post(process.env.REACT_APP_API_URL + "login", postQuery);
             axios
-              .get(process.env.REACT_APP_API_URL + "matching/returnmatch", {
+              .post(process.env.REACT_APP_API_URL + "matching/returnmatch", {
                 id: response.id,
               })
               .then((res) => {
