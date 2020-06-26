@@ -14,7 +14,7 @@ export default function Messaging({ username, spotifyId }) {
         setMatch(res.data);
         setIsMatched(true);
       });
-  });
+  }, []);
   const updateMatch = (user) => {
     setMatch(user);
     setIsMatched(true);
