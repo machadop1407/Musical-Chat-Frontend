@@ -11,6 +11,7 @@ export default function Menu({ spotify }) {
   const [currentSong, setCurrentSong] = useState(null);
   const [username, setUsername] = useState(null);
   const [spotifyId, setId] = useState("");
+
   // var fakeTracks = [
   //   "sdada",
   //   "asdasd",
@@ -42,7 +43,6 @@ export default function Menu({ spotify }) {
       spotify.getMe().then((response) => {
         // Setting Genres
         var favoriteGenres = [];
-        setId(response.id);
 
         Array.prototype.byCount = function () {
           var itm,
@@ -76,6 +76,7 @@ export default function Menu({ spotify }) {
             };
 
             setUsername(response.display_name);
+            setId(response.id);
             axios.post(process.env.REACT_APP_API_URL + "login", postQuery);
             clearInterval(timeout);
           }
@@ -98,7 +99,9 @@ export default function Menu({ spotify }) {
       <div className="row menuPage">
         <div className="leftCol">
           <div className="messaging">
-            <Messaging username={username} spotifyId={spotifyId} />
+            {spotifyId && spotifyId != undefined && (
+              <Messaging username={username} spotifyId={spotifyId} />
+            )}
           </div>
         </div>
         <div className="rightCol">
