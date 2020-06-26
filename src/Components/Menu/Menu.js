@@ -42,6 +42,7 @@ export default function Menu({ spotify }) {
       spotify.getMe().then((response) => {
         // Setting Genres
         var favoriteGenres = [];
+        setId(response.id);
 
         Array.prototype.byCount = function () {
           var itm,
@@ -75,7 +76,6 @@ export default function Menu({ spotify }) {
             };
 
             setUsername(response.display_name);
-            setId(response.id);
             axios.post(process.env.REACT_APP_API_URL + "login", postQuery);
             clearInterval(timeout);
           }
