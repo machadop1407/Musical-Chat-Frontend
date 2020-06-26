@@ -8,6 +8,7 @@ export default function Messaging({ username, spotifyId }) {
   const [isMatched, setIsMatched] = useState(false);
 
   useEffect(() => {
+    console.log("sssss");
     console.log(spotifyId);
     axios
       .get(process.env.REACT_APP_API_URL + `matching/returnmatch/${spotifyId}`)
