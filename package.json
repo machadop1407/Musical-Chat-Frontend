@@ -10,8 +10,10 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
+    "react-scroll-to-bottom": "^3.0.0",
     "react-switch": "^5.0.1",
     "reactstrap": "^8.4.1",
+    "socket.io-client": "^2.3.0",
     "spotify-web-api-js": "^1.4.0"
   },
   "scripts": {

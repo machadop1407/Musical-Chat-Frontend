@@ -1,15 +1,29 @@
 import React, { useEffect, useState } from "react";
+
 import "../../Styles/Messaging.css";
+
 import FindingMatch from "../Menu/FindingMatch";
+import Chat from "../Menu/Chat";
+
 import axios from "axios";
+import io from "socket.io-client";
+
+let socket;
+const CONNECTION_PORT = process.env.REACT_APP_API_URL;
 
 export default function Messaging({ username, spotifyId }) {
   const [match, setMatch] = useState({});
   const [isMatched, setIsMatched] = useState(false);
+  const [room, setRoom] = useState("");
 
   useEffect(() => {
-    console.log("sssss");
-    console.log(spotifyId);
+    socket = io(CONNECTION_PORT);
+
+    axios
+      .get(process.env.REACT_APP_API_URL + `chat/getuser${spotifyId}`)
+      .then((res) => {
+        setRoom(res.data[0].room);
+      });
     axios
       .get(process.env.REACT_APP_API_URL + `matching/returnmatch/${spotifyId}`)
       .then((res) => {
@@ -57,7 +71,9 @@ export default function Messaging({ username, spotifyId }) {
           />
         )}
 
-        <div className="chat"></div>
+        <div className="chatWrap">
+          <Chat user={username} socket={socket} room={room} />
+        </div>
       </div>
     </div>
   );
