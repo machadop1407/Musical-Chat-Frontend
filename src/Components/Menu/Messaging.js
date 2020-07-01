@@ -20,24 +20,28 @@ export default function Messaging({ username, spotifyId }) {
     socket = io(CONNECTION_PORT);
 
     axios
-      .get(process.env.REACT_APP_API_URL + `chat/getuser${spotifyId}`)
-      .then((res) => {
-        console.log(res.data.room);
-        console.log(res);
-        // setRoom(res.data[0].room);
-        // socket.emit("joinroom", res.data.room);
-      });
-    axios
       .get(process.env.REACT_APP_API_URL + `matching/returnmatch/${spotifyId}`)
       .then((res) => {
         setMatch(res.data);
         setIsMatched(true);
+        axios
+          .get(process.env.REACT_APP_API_URL + `chat/getuser${spotifyId}`)
+          .then((res) => {
+            setRoom(res.data[0].room);
+            socket.emit("joinroom", res.data.room);
+          });
       });
   }, []);
 
   const updateMatch = (user) => {
     setMatch(user);
     setIsMatched(true);
+    axios
+      .get(process.env.REACT_APP_API_URL + `chat/getuser${spotifyId}`)
+      .then((res) => {
+        setRoom(res.data[0].room);
+        socket.emit("joinroom", res.data.room);
+      });
   };
 
   return (
