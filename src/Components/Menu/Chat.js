@@ -1,6 +1,6 @@
 import React from "react";
 import ScrollToBottom from "react-scroll-to-bottom";
-import "./App.css";
+import "../../Styles/Chat.css";
 
 import axios from "axios";
 
