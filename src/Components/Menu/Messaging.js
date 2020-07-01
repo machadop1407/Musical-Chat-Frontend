@@ -22,7 +22,8 @@ export default function Messaging({ username, spotifyId }) {
     axios
       .get(process.env.REACT_APP_API_URL + `matching/returnmatch/${spotifyId}`)
       .then((res) => {
-        if (res.data != "Not Matched") {
+        console.log(res.data);
+        if (res.data != 0) {
           setMatch(res.data);
           setIsMatched(true);
           axios
@@ -32,6 +33,8 @@ export default function Messaging({ username, spotifyId }) {
               socket.emit("joinroom", res.data.room);
             });
         }
+
+        console.log(isMatched);
       });
   }, []);
 
