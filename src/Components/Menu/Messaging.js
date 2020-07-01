@@ -25,7 +25,7 @@ export default function Messaging({ username, spotifyId }) {
         setMatch(res.data);
         setIsMatched(true);
         axios
-          .get(process.env.REACT_APP_API_URL + `chat/getuser${spotifyId}`)
+          .get(process.env.REACT_APP_API_URL + `chat/getuser/${spotifyId}`)
           .then((res) => {
             setRoom(res.data[0].room);
             socket.emit("joinroom", res.data.room);
@@ -37,7 +37,7 @@ export default function Messaging({ username, spotifyId }) {
     setMatch(user);
     setIsMatched(true);
     axios
-      .get(process.env.REACT_APP_API_URL + `chat/getuser${spotifyId}`)
+      .get(process.env.REACT_APP_API_URL + `chat/getuser/${spotifyId}`)
       .then((res) => {
         setRoom(res.data[0].room);
         socket.emit("joinroom", res.data.room);
