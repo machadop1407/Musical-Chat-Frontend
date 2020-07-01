@@ -22,6 +22,7 @@ export default function Messaging({ username, spotifyId }) {
     axios
       .get(process.env.REACT_APP_API_URL + `matching/returnmatch/${spotifyId}`)
       .then((res) => {
+        console.log(res.data);
         setMatch(res.data);
         setIsMatched(true);
         axios
