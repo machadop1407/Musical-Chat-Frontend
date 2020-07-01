@@ -72,9 +72,11 @@ export default function Messaging({ username, spotifyId }) {
           />
         )}
 
-        <div className="chatWrap">
-          <Chat user={username} socket={socket} room={room} />
-        </div>
+        {isMatched && (
+          <div className="chatWrap">
+            <Chat user={username} socket={socket} room={room} />
+          </div>
+        )}
       </div>
     </div>
   );
