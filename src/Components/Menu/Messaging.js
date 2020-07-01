@@ -22,8 +22,10 @@ export default function Messaging({ username, spotifyId }) {
     axios
       .get(process.env.REACT_APP_API_URL + `chat/getuser${spotifyId}`)
       .then((res) => {
-        setRoom(res.data[0].room);
-        socket.emit("joinroom", res.data.room);
+        console.log(res.data.room);
+        console.log(res);
+        // setRoom(res.data[0].room);
+        // socket.emit("joinroom", res.data.room);
       });
     axios
       .get(process.env.REACT_APP_API_URL + `matching/returnmatch/${spotifyId}`)
@@ -74,7 +76,7 @@ export default function Messaging({ username, spotifyId }) {
 
         {isMatched && (
           <div className="chatWrap">
-            <Chat user={username} socket={socket} room={room} />
+            {/* <Chat user={username} socket={socket} room={room} /> */}
           </div>
         )}
       </div>
