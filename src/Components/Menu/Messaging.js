@@ -24,8 +24,12 @@ export default function Messaging({ username, spotifyId }) {
       .then((res) => {
         console.log(res.data);
         if (res.data != 0) {
+          console.log(isMatched);
+
           setMatch(res.data);
           setIsMatched(true);
+          console.log(isMatched);
+
           axios
             .get(process.env.REACT_APP_API_URL + `chat/getuser/${spotifyId}`)
             .then((res) => {
@@ -33,20 +37,18 @@ export default function Messaging({ username, spotifyId }) {
               socket.emit("joinroom", res.data.room);
             });
         }
-
-        console.log(isMatched);
       });
   }, []);
 
   const updateMatch = (user) => {
-    setMatch(user);
-    setIsMatched(true);
-    axios
-      .get(process.env.REACT_APP_API_URL + `chat/getuser/${spotifyId}`)
-      .then((res) => {
-        setRoom(res.data[0].room);
-        socket.emit("joinroom", res.data.room);
-      });
+    // setMatch(user);
+    // setIsMatched(true);
+    // axios
+    //   .get(process.env.REACT_APP_API_URL + `chat/getuser/${spotifyId}`)
+    //   .then((res) => {
+    //     setRoom(res.data[0].room);
+    //     socket.emit("joinroom", res.data.room);
+    //   });
   };
 
   return (
@@ -85,7 +87,7 @@ export default function Messaging({ username, spotifyId }) {
 
         {isMatched && (
           <div className="chatWrap">
-            {/* <Chat user={username} socket={socket} room={room} /> */}
+            <Chat user={username} socket={socket} room={room} />
           </div>
         )}
       </div>
