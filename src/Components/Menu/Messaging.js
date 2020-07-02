@@ -49,10 +49,9 @@ export default function Messaging({ username, spotifyId }) {
         setRoom(res.data[0].room);
         socket.emit("joinroom", res.data[0].room);
         axios
-          .get(
-            process.env.REACT_APP_API_URL +
-              `chat/deletemessages/${res.data[0].room}`
-          )
+          .post(process.env.REACT_APP_API_URL + `chat/deletemessages`, {
+            room: res.data[0].room,
+          })
           .then(() => {
             chatRef.current.eraseMessages();
           });
