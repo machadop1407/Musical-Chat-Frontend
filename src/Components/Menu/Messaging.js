@@ -22,15 +22,13 @@ export default function Messaging({ username, spotifyId }) {
     axios
       .get(process.env.REACT_APP_API_URL + `matching/returnmatch/${spotifyId}`)
       .then((res) => {
-        console.log(res.data);
-        if (res.data != "0") {
+        if (res.data.message != 0) {
           setMatch(res.data);
           setIsMatched(true);
           axios
             .get(process.env.REACT_APP_API_URL + `chat/getuser/${spotifyId}`)
             .then((res) => {
               setRoom(res.data[0].room);
-              console.log(res);
               socket.emit("joinroom", res.data.room);
             });
         }
