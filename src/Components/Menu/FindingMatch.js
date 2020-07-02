@@ -8,7 +8,6 @@ export default function FindingMatch({
   username,
   updateMatch,
   isMatched,
-  socket,
 }) {
   // const [name, setName] = useState("");
   const [modal, setModal] = useState(false);

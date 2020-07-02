@@ -15,6 +15,7 @@ export default function Messaging({ username, spotifyId }) {
   const [match, setMatch] = useState({});
   const [isMatched, setIsMatched] = useState(false);
   const [room, setRoom] = useState("");
+  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     socket = io(CONNECTION_PORT);
@@ -29,9 +30,8 @@ export default function Messaging({ username, spotifyId }) {
             .get(process.env.REACT_APP_API_URL + `chat/getuser/${spotifyId}`)
             .then((res) => {
               setRoom(res.data[0].room);
-              console.log(res.data[0].room);
-              console.log(room);
               socket.emit("joinroom", res.data[0].room);
+              setLoaded(true);
             });
         }
       });
@@ -84,7 +84,7 @@ export default function Messaging({ username, spotifyId }) {
 
         {isMatched && (
           <div className="chatWrap">
-            <Chat user={username} socket={socket} room={room} />
+            {loaded && <Chat user={username} socket={socket} room={room} />}
           </div>
         )}
       </div>
