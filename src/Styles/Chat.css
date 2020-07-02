@@ -73,11 +73,11 @@ button:focus {
   max-width: 50%;
 }
 
-#sentByUser.chatMessageContainer {
+#sentByOther.chatMessageContainer {
   justify-content: flex-start;
 }
 
-#sentByOther.chatMessageContainer {
+#sentByUser.chatMessageContainer {
   justify-content: flex-end;
 }
 
