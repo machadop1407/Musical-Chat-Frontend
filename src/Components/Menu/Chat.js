@@ -61,7 +61,8 @@ class Chat extends React.Component {
 
   render() {
     return (
-      <div className="chat">
+      // <div className="chat">
+      <>
         {/* <input
           type="text"
           placeholder="Username"
@@ -105,7 +106,8 @@ class Chat extends React.Component {
           />
           <button onClick={this.sendMessage}>Send</button>
         </div>
-      </div>
+        </>
+      {/* </div> */}
     );
   }
 }
