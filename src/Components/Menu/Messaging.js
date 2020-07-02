@@ -51,22 +51,22 @@ export default function Messaging({ username, spotifyId }) {
   return (
     <div className="messagingWrapper">
       <div className="header">
-        {/* <div id="username">@{username}</div> */}
+        <div id="username">@{username}</div>
         {isMatched && (
           <>
             <div id="rematch">
-              {/* <FindingMatch
+              <FindingMatch
                 isMatched={isMatched}
                 spotifyId={spotifyId}
                 username={username}
                 updateMatch={updateMatch}
-              /> */}
+              />
             </div>
             <div id="match-username">
               @
-              {/* {match.username.length > 14
+              {match.username.length > 14
                 ? match.username.substring(0, 11) + "..."
-                : match.username} */}
+                : match.username}
             </div>
           </>
         )}
