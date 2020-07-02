@@ -4,7 +4,8 @@ button:focus {
 }
 
 .chat {
-  height: calc(100% - 50px);
+  margin-top: 0;
+  height: 100%;
   width: 100%;
   border: none;
   border-radius: 10px;
