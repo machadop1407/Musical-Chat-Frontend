@@ -13,7 +13,7 @@ input:focus {
 }
 
 .navbar {
-  background-color: #535050;
+  background-color: #13bd64;
   box-shadow: 2px 2px 8px black;
   min-height: 80px;
   padding-left: 10px;
@@ -21,5 +21,5 @@ input:focus {
 
 .navbar-logo img {
   margin-top: 15px;
-  margin-left: 10px;
+  margin-left: 20px;
 }
