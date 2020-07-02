@@ -23,7 +23,7 @@
   background-color: #13bd64;
   color: #f8f8f8;
   font-weight: 600;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 #matchBttn:active {
@@ -44,10 +44,6 @@
 .switchContainer p {
   margin-top: 5px;
   padding-right: 5px;
-}
-
-#matchSwitch {
-  /* margin-top: 0px; */
 }
 
 /* REMATCH MODAL */
