@@ -42,6 +42,10 @@ class Chat extends React.Component {
     };
   }
 
+  eraseMessages() {
+    this.setState({ messages: [] });
+  }
+
   componentDidMount() {
     console.log(this.props.room);
     axios

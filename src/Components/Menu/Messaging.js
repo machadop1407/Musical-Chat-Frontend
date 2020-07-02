@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 import "../../Styles/Messaging.css";
 
@@ -16,6 +16,9 @@ export default function Messaging({ username, spotifyId }) {
   const [isMatched, setIsMatched] = useState(false);
   const [room, setRoom] = useState("");
   const [loaded, setLoaded] = useState(false);
+
+  //Child Messages Ref
+  const chatRef = useRef(null);
 
   useEffect(() => {
     socket = io(CONNECTION_PORT);
@@ -44,7 +47,15 @@ export default function Messaging({ username, spotifyId }) {
       .get(process.env.REACT_APP_API_URL + `chat/getuser/${spotifyId}`)
       .then((res) => {
         setRoom(res.data[0].room);
-        socket.emit("joinroom", res.data.room);
+        socket.emit("joinroom", res.data[0].room);
+        axios
+          .get(
+            process.env.REACT_APP_API_URL +
+              `chat/deletemessages/${res.data[0].room}`
+          )
+          .then(() => {
+            chatRef.current.eraseMessages();
+          });
       });
   };
 
@@ -84,7 +95,9 @@ export default function Messaging({ username, spotifyId }) {
 
         {isMatched && (
           <div className="chat">
-            {loaded && <Chat user={username} socket={socket} room={room} />}
+            {loaded && (
+              <Chat user={username} socket={socket} room={room} ref={chatRef} />
+            )}
           </div>
         )}
       </div>
