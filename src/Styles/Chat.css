@@ -81,12 +81,12 @@ button:focus {
   justify-content: flex-end;
 }
 
-#sentByUser.chatMessageContainer .messageSent {
+#sentByOther.chatMessageContainer .messageSent {
   padding: 0 15px 0px 15px;
   background-color: #f5f5f5;
 }
 
-#sentByOther.chatMessageContainer .messageSent {
+#sentByUser.chatMessageContainer .messageSent {
   padding: 0 15px 0px 15px;
   background-color: #13bd64;
   color: #f5f5f5;
