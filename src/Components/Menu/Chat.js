@@ -43,6 +43,7 @@ class Chat extends React.Component {
   }
 
   componentDidMount() {
+    console.log(this.props.room);
     axios
       .get(
         process.env.REACT_APP_API_URL + `chat/getmessages/${this.props.room}`

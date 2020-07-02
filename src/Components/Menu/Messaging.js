@@ -29,7 +29,9 @@ export default function Messaging({ username, spotifyId }) {
             .get(process.env.REACT_APP_API_URL + `chat/getuser/${spotifyId}`)
             .then((res) => {
               setRoom(res.data[0].room);
-              socket.emit("joinroom", res.data.room);
+              console.log(res.data[0].room);
+              console.log(room);
+              socket.emit("joinroom", res.data[0].room);
             });
         }
       });
