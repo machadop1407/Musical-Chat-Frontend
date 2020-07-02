@@ -106,8 +106,8 @@ class Chat extends React.Component {
           />
           <button onClick={this.sendMessage}>Send</button>
         </div>
-        </>
-      {/* </div> */}
+      </>
+      // {/* </div> */}
     );
   }
 }
