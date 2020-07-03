@@ -61,6 +61,8 @@ export default function Messaging({ username, spotifyId }) {
             chatRef.current.eraseMessages();
           });
       });
+
+    setLoaded(true);
   };
 
   return (
