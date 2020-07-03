@@ -54,6 +54,9 @@ export default function Messaging({ username, spotifyId }) {
           })
           .then(() => {
             chatRef.current.eraseMessages();
+            axios.post(process.env.REACT_APP_API_URL + "matching/deletematch", {
+              id: match.spotifyId,
+            });
           });
       });
   };
