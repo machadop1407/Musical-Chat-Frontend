@@ -1,68 +1,69 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Musical Chat - Real Time Chat Between People with Similar Taste in Music
 
-## Available Scripts
 
-In the project directory, you can run:
+## Description:
 
-### `npm start`
+Musical Chat is a platform where users are able to connect and
+Chat with people who have similar taste in music as them. The
+user needs to login with their Spotify account, which allows the
+platform to have access to the songs and genres they listen to.
+I created an algorithm which takes into account the favorite
+genres from users and match people based on it. Since there are
+several different genres, the algorithm takes into accoutn how
+similar the genres sre based on string similarity. When matched,
+they are able to chat in real time with each other using Web
+Sockets.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Time Taken:
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+1 Month
 
-### `npm test`
+## Technologies Used:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- ReactJS
+- NodeJS
+- WebSockets (Socket.io)
+- MySQL
+- HTML
+- CSS
+- Spotify API
+- Heroku
 
-### `npm run build`
+### Front End:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This repository is for the front-end. The front-end is hosted on Netlify.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Back End
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The back-end is hosted on two different Heroku Dynos. One for the Musical Chat Rest API, and the other for the Spotify Authentication.
+The back-end repository is: https://github.com/machadop1407/musical-connection
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Design:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Database:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+2 MySQL databases:
+- Users: Stores everything about the user including username, spotifyId, favorite genre, currentmatch, and current socket room.
+- Messages: Stores all messages and info about them including the message itself, the id of the user that sent, and the id of the user that recived.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+### Server-Side:
+Rest API: 
+- Express server with 3 routes:
+  - Login: login route that checks if user already has an account in the platform. If not, it inserts a new row in the Users table and fetches all relevant info.
+  - Matching: matching route that handles all matching requests. It also includes the matching algorithm described above.
+  - Messages: messaging route that handles all CRUD operations related to messages.
+  
+Spotify Authentication:
+- Seperate server that utilizes Spotify's Authorization Code Flow method.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Front-End:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Front End fully developed in ReactJS using the create-react-app boiler plate
 
-### Code Splitting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-### Analyzing the Bundle Size
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-### Making a Progressive Web App
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
