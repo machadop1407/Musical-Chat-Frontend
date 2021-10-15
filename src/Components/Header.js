@@ -10,6 +10,9 @@ export default function Header() {
         <a className="navbar-logo" href="#">
           <img src={Logo} width="50" height="50" alt="" />
         </a>
+        <a className="navbar-title" href="#">
+          <span className="navbar-title-text">Musical Chat</span>
+        </a>
       </nav>
     </>
   );

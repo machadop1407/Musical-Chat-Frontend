@@ -13,6 +13,7 @@ input:focus {
 }
 
 .navbar {
+  position:relative;
   background-color: #13bd64;
   box-shadow: 2px 2px 8px black;
   min-height: 80px;
@@ -22,4 +23,23 @@ input:focus {
 .navbar-logo img {
   margin-top: 15px;
   margin-left: 20px;
+}
+
+.navbar-title{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  
+  text-decoration: none;
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+}
+
+.navbar-title-text {
+
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0 0 0 25px;
 }

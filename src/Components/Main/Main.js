@@ -29,8 +29,12 @@ const Main = () => {
   return (
     <div className="Main">
       <div className="mainContainer">
+
         {!loggedIn && (
           <div className="row login">
+            <div className="mainDescription">
+              <p>Musical Chat is a platform where you can connect and chat with people who have similar taste in music!</p>
+            </div>
             <div id="loginTitle">
               <p>
                 Login With Your <span>Spotify</span> Account
@@ -41,7 +45,7 @@ const Main = () => {
             </div>
 
             <a href={process.env.REACT_APP_AUTH_URL}>
-              <button>Login With Spotify</button>
+              <button className="login-btn"><span className="login-btn-text">Login With Spotify</span></button>
             </a>
           </div>
         )}
