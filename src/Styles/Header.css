@@ -13,6 +13,7 @@ input:focus {
 }
 
 .navbar {
+  position:relative;
   background-color: #13bd64;
   box-shadow: 2px 2px 8px black;
   min-height: 80px;
@@ -22,4 +23,78 @@ input:focus {
 .navbar-logo img {
   margin-top: 15px;
   margin-left: 20px;
+}
+
+.navbar-title{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  
+  text-decoration: none;
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+}
+
+.navbar-title-text {
+
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0 0 0 25px;
+}
+
+.login-btn-container{
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.header-login-btn{
+  width: 100%;
+  position: relative;
+  text-align: center; 
+
+  border: none;
+  border-radius: 7px;
+  width: 290px;
+  text-align: center;
+
+
+  background-color: #13bd64;
+  color: #f8f8f8;
+  font-weight: 600;
+  height: 70px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.login-text{
+  width: 100%;
+  position: relative;
+  text-align: center;
+
+  
+}
+
+.login-text p {
+  padding: 0 0 0 28px;
+  position: absolute;
+  padding-top: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 28px;
+
+}
+
+.header-login-btn:active {
+  box-shadow: 0 3px #666;
+  transform: translate(0, 5px);
+  transition: all 0.3s ease-in;
+}
+
+.header-login-btn:hover {
+  cursor: pointer;
 }

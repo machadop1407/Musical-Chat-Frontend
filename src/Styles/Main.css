@@ -4,6 +4,20 @@ html, body {
   font-family: "Trebuchet MS", "Century Gothic", Helvetica;
 }
 
+.mainDescription{
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0 0 0 100px;
+  bottom:25px;
+  position: relative;
+}
+
+.mainDescription p{
+  color: white;
+  margin: 35px 0;
+  text-align: center;
+}
+
 .mainContainer {
   width: 100vw;
 }
@@ -44,17 +58,28 @@ button:hover {
 
 #loginTitle span {
   color: #13bd64;
+  width: 100vw;
 }
 
 .login button {
+  position: relative;
   border: none;
   border-radius: 7px;
-  width: 180px;
+  width: 250px;
   background-color: #13bd64;
   color: #f8f8f8;
   font-weight: 600;
-  height: 60px;
+  height: 70px;
   box-shadow: 0 6px #999;
+
+  bottom: 50px;
+}
+
+.login-btn-text{
+  
+  margin-top: 10px;
+  font-size: 22px;
+
 }
 
 .login button:active {
